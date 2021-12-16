@@ -1,6 +1,5 @@
-#ifndef AREAOFSHAPE_H
-
-#define AREAOFSHAPE_H
+#ifndef EXERCISEBASIC_H
+#define EXERCISEBASIC_H
 
 struct Area {
 	float result;
@@ -20,4 +19,14 @@ struct Area {
 	float Kite(int, int);
 };
 
-#endif /* AREAOFSHAPE_H */
+int SumFirstnNaturalNumber();
+
+std::pair<float, float> quadEquation(float, float, float);
+
+float CalculateDistance(float, float, float);
+
+float SimpleInterest(float, float, float);
+
+float CylinderVol(float, float);
+
+#endif /* EXERCISEBASIC_H */
