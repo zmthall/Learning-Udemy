@@ -29,4 +29,6 @@ float SimpleInterest(float, float, float);
 
 float CylinderVol(float, float);
 
+void NetSalary();
+
 #endif /* EXERCISEBASIC_H */

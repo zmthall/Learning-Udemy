@@ -1,7 +1,7 @@
 #include <iostream>
 #include <utility>
 #include <cmath>
-#include "ExerciseBasic.h"
+#include "ExerciseSec5.h"
 
 float Area::Triangle(int base, int height)
 {
@@ -123,6 +123,32 @@ float CylinderVol(float radius, float height)
 	return result;
 }
 
+void NetSalary()
+{
+	float BasicSalary{}, Allowances{}, Deductions{}, result{};
+	
+	std::cout << "Enter Basic Salary: ";
+	std::cin >> BasicSalary;
+	
+	std::cout << "Enter Percentage of Allowances (%): ";
+	std::cin >> Allowances;
+	
+	std::cout << "Enter Percentage of Deductions(%): ";
+	std::cin >> Deductions;
+	
+	if(Allowances > 1)
+		Allowances /= 100;
+		
+	if(Deductions > 1)
+		Deductions /= 100;
+	
+	result = BasicSalary + (BasicSalary*Allowances - BasicSalary*Deductions);
+	
+	std::cout << "The net salary is: " << result << " dollars.\n";
+
+	return;
+}
+
 int main()
 {
 	Area val{};
@@ -145,6 +171,8 @@ int main()
 	std::cout << "The distance is: " << CalculateDistance(0, 13, 2.2) << " units.\n";
 	std::cout << "The simple interest is: " << SimpleInterest(10000.00, 5, 3.875) << " dollars.\n";
 	std::cout << "Cylinder volume: " << CylinderVol(10, 4) << " units.\n";
+	
+	NetSalary();
 	
 	return 0;
 }
